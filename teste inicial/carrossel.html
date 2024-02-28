@@ -15,12 +15,51 @@
                 position: relative;
                 left: 10%;
                 top: 20%;
-                }
+                display: flex;
+
+                z-index: 10;
+                overflow: hidden;
+            }
+
+            #carrossel{
+                transition: transform 0.5s ease-in-out;
+                transform: translateX(0);
+            
+            }
+
+
         </style>
     </head>
     <body>
         <div class="corpo_carosel">
-            tes
+
+            <div id="carrossel"> 
+                <img src="imagens/1.png"  width="24.5%">
+                <img src="imagens/2.png"  width="24.5%">
+                <img src="imagens/3.png"  width="24.5%">
+                <img src="imagens/4.png"  width="24.5%">
+            </div>
+
         </div>
+
+        <script language="javascript">
+            const imgs = document.getElementById("carrossel");
+            const img = document.querySelectorAll("#carrossel img");
+        
+            let idx = 0;
+
+            function carrossel() {
+                idx++;
+                if(idx > img.length - parseInt(imgs.clientWidth/210)){
+                    idx=0;
+                }
+                imgs.style.transform = `translateX(${-idx * (150 + 60)}px)`;
+        
+            }
+        
+            setInterval(carrossel, 5000);
+        
+        
+        </script>
     </body>
 </html>
