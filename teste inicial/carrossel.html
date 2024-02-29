@@ -11,7 +11,7 @@
             .corpo_carosel{
                 background-color: aqua;
                 height: 20%;
-                width: 80%;
+                width: 400px;
                 position: relative;
                 left: 10%;
                 top: 20%;
@@ -34,14 +34,15 @@
         <div class="corpo_carosel">
 
             <div id="carrossel"> 
-                <img src="imagens/1.png"  width="24.5%">
-                <img src="imagens/2.png"  width="24.5%">
-                <img src="imagens/3.png"  width="24.5%">
-                <img src="imagens/4.png"  width="24.5%">
+                <img src="imagens/1.png"  width="200px">
+                <img src="imagens/2.png"  width="200px">
+                <img src="imagens/3.png"  width="200px">
+                <img src="imagens/4.png"  width="200px">
             </div>
 
         </div>
 
+        <input type="button" onclick="carrossel()">
         <script language="javascript">
             const imgs = document.getElementById("carrossel");
             const img = document.querySelectorAll("#carrossel img");
@@ -57,7 +58,7 @@
         
             }
         
-            setInterval(carrossel, 5000);
+            
         
         
         </script>
