@@ -10,13 +10,11 @@
             }
             .corpo_carosel{
                 background-color: aqua;
-                height: 20%;
-                width: 400px;
+                height:400px ;
                 position: relative;
-                left: 10%;
+                left: 120px;
                 top: 20%;
                 display: flex;
-
                 z-index: 10;
                 overflow: hidden;
             }
@@ -24,7 +22,20 @@
             #carrossel{
                 transition: transform 0.5s ease-in-out;
                 transform: translateX(0);
+                display: flex;
             
+            }
+
+            #carrossel img{
+                width: 314px;
+                height: 270px;
+                
+            }
+
+            .img_carrossel{
+                margin: 16px;
+                transition: transform 0.5s ease-in-out;
+                transform: translateX(0);
             }
 
 
@@ -34,31 +45,56 @@
         <div class="corpo_carosel">
 
             <div id="carrossel"> 
-                <img src="imagens/1.png"  width="200px">
-                <img src="imagens/2.png"  width="200px">
-                <img src="imagens/3.png"  width="200px">
-                <img src="imagens/4.png"  width="200px">
-            </div>
+                <div id="prod0" class="img_carrossel"> <img src="imagens/1.png"  > </div>
+                <div id="prod1" class="img_carrossel"> <img src="imagens/2.png"  > </div>
+                <div id="prod2" class="img_carrossel"> <img src="imagens/3.png"  > </div>
+                <div id="prod3" class="img_carrossel"> <img src="imagens/4.png"  > </div>
+                
+                
+            </div> 
 
         </div>
+        
+        <input type="button" onclick="mover_carrossel()" placeholder="proxima" >
 
-        <input type="button" onclick="carrossel()">
         <script language="javascript">
             const imgs = document.getElementById("carrossel");
-            const img = document.querySelectorAll("#carrossel img");
-        
-            let idx = 0;
+            const img = document.getElementsByClassName("img_carrossel");
+            const img1 = document.getElementById("prod0");
+            const img2 = document.getElementById("prod1");
+            const img3 = document.getElementById("prod2");
+            const img4 = document.getElementById("prod3");
 
+
+            let idx = 0;
             function carrossel() {
                 idx++;
                 if(idx > img.length - parseInt(imgs.clientWidth/210)){
                     idx=0;
                 }
-                imgs.style.transform = `translateX(${-idx * (150 + 60)}px)`;
+                imgs.style.transform = `translateX(${-idx * (210)}px)`;
         
             }
-        
-            
+
+
+            function mover_carrossel(){
+                idx++;
+
+                img1.style.transform = `translateX(${-idx * (345)}px)`;
+                img2.style.transform = `translateX(${-idx * (345)}px)`;
+                img3.style.transform = `translateX(${-idx * (345)}px)`;
+                img4.style.transform = `translateX(${-idx * (345)}px)`;
+
+                setTimeout( () => {
+                    document.getElementById(`prod0`).style.opacity = 0;
+                    document.getElementById(`prod0`).style.transform = `translateX(1035px)`; 
+                }, "500");
+                
+                setTimeout( () => {
+                    document.getElementById(`prod0`).style.opacity = 1;
+                },"1000");
+            }
+    
         
         
         </script>
