@@ -7,12 +7,30 @@
                 margin:0;
                 padding:0;
             }
+
+            .galeria{
+                background-color: #8F542E;
+                height: 745px;
+                padding: 129px 0px 0px 0px;
+                text-align: center;
+        
+            }
+            .galeria p{
+                font-size: 40px;
+                width: 100%;
+                text-align: center;
+                font-family: Garamond;
+                color: #FFFF;
+                margin: 0;
+                padding: 0;
+
+            }
+
             .corpo_carosel{
                 background-color: aqua;
                 height:min-content ;
                 position: relative;
                 left: 10%;
-                top: 20%;
                 display: flex;
                 width: 90%;
                 overflow-x:auto;
@@ -38,18 +56,19 @@
         <link rel="shortcut icon" href="imagens/logo_escura.svg" />
     </head>
     <body>
-        <div class="corpo_carosel">
 
-           
-            <div id="prod0" class="caixa_carrossel"> <img src="imagens/1.png"  > </div>
-            <div id="prod1" class="caixa_carrossel"> <img src="imagens/2.png"  > </div>
-            <div id="prod2" class="caixa_carrossel"> <img src="imagens/3.png"  > </div>
-            <div id="prod3" class="caixa_carrossel"> <img src="imagens/4.png"  > </div>
-            <div id="prod4" class="caixa_carrossel"> <img src="imagens/4.png"  > </div>
+        <div class="galeria">
+            <p><b>CAFETERIA</b>
+                <hr></p>
+            <div class="corpo_carosel">
+            
+                <div id="prod0" class="caixa_carrossel"> <img src="imagens/1.png"  > </div>
+                <div id="prod1" class="caixa_carrossel"> <img src="imagens/2.png"  > </div>
+                <div id="prod2" class="caixa_carrossel"> <img src="imagens/3.png"  > </div>
+                <div id="prod3" class="caixa_carrossel"> <img src="imagens/4.png"  > </div>
+                <div id="prod4" class="caixa_carrossel"> <img src="imagens/4.png"  > </div>
                 
-                
-
-
+            </div>
         </div>
         <br>
         <input type="button" onclick="mover_carrossel()" placeholder="proxima" >
