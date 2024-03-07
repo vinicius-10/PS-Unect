@@ -6,38 +6,33 @@
             body{
                 margin:0;
                 padding:0;
-                display: flex;
             }
             .corpo_carosel{
                 background-color: aqua;
-                height:400px ;
+                height:min-content ;
                 position: relative;
-                left: 120px;
+                left: 10%;
                 top: 20%;
                 display: flex;
-                z-index: 10;
-                overflow: hidden;
+                width: 90%;
+                overflow-x:auto;
+
             }
 
-            #carrossel{
-                transition: transform 0.5s ease-in-out;
-                transform: translateX(0);
-                display: flex;
+            .caixa_carrossel{
+                margin: 0px 12px;
+                height: 400px;
+                padding: 12px;
+                background-color: red;
+                border-radius: 8px;
+            }
             
+            .caixa_carrossel img{
+                width: 313px;
+                height: 277px;
+                border-radius: 8px;
             }
-
-            #carrossel img{
-                width: 314px;
-                height: 270px;
-                
-            }
-
-            .img_carrossel{
-                margin: 16px;
-                transition: transform 0.5s ease-in-out;
-                transform: translateX(0);
-            }
-
+            
 
         </style>
         <link rel="shortcut icon" href="imagens/logo_escura.svg" />
@@ -45,17 +40,18 @@
     <body>
         <div class="corpo_carosel">
 
-            <div id="carrossel"> 
-                <div id="prod0" class="img_carrossel"> <img src="imagens/1.png"  > </div>
-                <div id="prod1" class="img_carrossel"> <img src="imagens/2.png"  > </div>
-                <div id="prod2" class="img_carrossel"> <img src="imagens/3.png"  > </div>
-                <div id="prod3" class="img_carrossel"> <img src="imagens/4.png"  > </div>
+           
+            <div id="prod0" class="caixa_carrossel"> <img src="imagens/1.png"  > </div>
+            <div id="prod1" class="caixa_carrossel"> <img src="imagens/2.png"  > </div>
+            <div id="prod2" class="caixa_carrossel"> <img src="imagens/3.png"  > </div>
+            <div id="prod3" class="caixa_carrossel"> <img src="imagens/4.png"  > </div>
+            <div id="prod4" class="caixa_carrossel"> <img src="imagens/4.png"  > </div>
                 
                 
-            </div> 
+
 
         </div>
-        
+        <br>
         <input type="button" onclick="mover_carrossel()" placeholder="proxima" >
 
         <script language="javascript">
