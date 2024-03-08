@@ -8,6 +8,7 @@
             body{
                 margin:0;
                 padding:0;
+                overflow-x: hidden;
             }
             
             .sobre{
@@ -48,7 +49,7 @@
                 border: none;
                 font-size: 18px;
                 font-weight: bold;
-                color: #ffff;
+                color: #F0F0F0;
                 cursor: pointer;
             }
 
@@ -57,6 +58,12 @@
                 left: 15px;
 
             }
+
+            .sobre_texto button:hover{
+                color: #ffff;
+                box-shadow: 3px 2px 3px black;
+            }
+            
             .sobre_texto .texto{
                 font-size: 18px;
             }
@@ -122,8 +129,8 @@
                 position: relative;
                 left: 10%;
                 display: flex;
-                width: 90%;
-                overflow-x:auto;
+                transition: transform 0.5s ease-in-out;
+                transform: translateX(0);
                 
             }
 
@@ -174,7 +181,7 @@
                 </p>
                 <p class="texto">O sonho de Carolina era criar um espaço aonde pudesse unir seu amor por culinária e a enorme paixão por literatura, venha saber mais dessa jornada:</p>
     
-                <button>FALE CONOSCO <img src="imagens/seta.svg"> </button>
+                <a href=""><button id="fale">FALE CONOSCO <img src="imagens/seta.svg"> </button></a>
                 
             </div>
         <div class="sobre_img">
@@ -185,7 +192,7 @@
     <div class="cafe"></div>
     <div class="galeria">
         <p class="titulo_cafeteria">CAFETERIA <hr></p>
-        <div class="corpo_carosel">
+        <div class="corpo_carosel" id="carrossel">
         
             <div id="prod0" class="caixa_carrossel"> <img src="imagens/1.png"  ><p>Brigadeiro de capuccino</p>O brigadeiro de cappuccino é uma das guloseimas que enfeitam o balcão da doceria... </div>
             <div id="prod1" class="caixa_carrossel"> <img src="imagens/2.png"  ><p>Pão de Mel</p>O pão de mel é um dos doces mais tradicionais que temos, ele é recheado com doce de leite... </div>
@@ -196,44 +203,22 @@
         </div>
     </div>
         <script language="javascript">
+
             const imgs = document.getElementById("carrossel");
-            const img = document.getElementsByClassName("img_carrossel");
-            const img1 = document.getElementById("prod0");
-            const img2 = document.getElementById("prod1");
-            const img3 = document.getElementById("prod2");
-            const img4 = document.getElementById("prod3");
+            const img = document.getElementsByClassName("caixa_carrossel");
 
 
             let idx = 0;
             function carrossel() {
                 idx++;
-                if(idx > img.length - parseInt(imgs.clientWidth/210)){
+                if(idx > img.length - parseInt(imgs.clientWidth/400)){
                     idx=0;
                 }
-                imgs.style.transform = `translateX(${-idx * (210)}px)`;
+                imgs.style.transform = `translateX(${-idx * (300)}px)`;
         
             }
 
-
-            function mover_carrossel(){
-                idx++;
-
-                img1.style.transform = `translateX(${-idx * (345)}px)`;
-                img2.style.transform = `translateX(${-idx * (345)}px)`;
-                img3.style.transform = `translateX(${-idx * (345)}px)`;
-                img4.style.transform = `translateX(${-idx * (345)}px)`;
-
-                setTimeout( () => {
-                    document.getElementById(`prod0`).style.opacity = 0;
-                    document.getElementById(`prod0`).style.transform = `translateX(1035px)`; 
-                }, "500");
-                
-                setTimeout( () => {
-                    document.getElementById(`prod0`).style.opacity = 1;
-                },"1000");
-            }
-    
-        
+            setInterval(carrossel, 2000);
         
         </script>
     </body>
