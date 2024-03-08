@@ -1,0 +1,190 @@
+body{
+	padding: 90px 0px 0px 0px ;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	background-color: #c3c9ff;
+}
+a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+/* menu */ 
+
+header{
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	background-color: #454496;
+	height: 90px;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left:0;
+}
+
+
+.logo{
+	font-size: 23px;
+	width: 25%;
+	text-align: center;
+}
+span{
+	color: #c3c9ff;
+}
+
+
+nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-grow: 2;
+	justify-content: right;
+	font-size: 17px;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+}
+
+ul.dropdown {
+	padding: 0px;
+	background: #454496;
+	display: none; 
+	position: absolute;
+	left: 0px;
+	font-size: 15px;
+}
+
+ul li:hover ul.dropdown {
+	display: block;
+}
+
+ul li {
+	display: block;
+	position: relative;
+	line-height: 21px;
+	text-align: left;
+}
+
+li a:hover{
+	color: #c3c9ff;
+	transition: .4s;
+}
+
+
+/* end menu */ 
+
+
+/* main body */ 
+
+
+
+main{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 2% 12%;
+	justify-content: center;
+	min-height: 18.5vh;
+}
+
+
+.card{
+	height: 320px;
+	width: 300px;
+	padding: 30px 0px;
+	background: #454496;
+	border-radius: 20px;
+	margin: 15px;
+	text-align: center;
+	color:#ffffff ;
+	font-weight:400;
+	font-size: 17px;
+}
+
+.card img{
+	width: 40%;
+}
+
+.card p{
+	font-weight: 800;
+	font-size: 19px;
+	word-wrap:break-word;
+}
+
+button{
+	background-color:#716fdf;
+	color: white;
+	text-decoration: none;
+	padding: 9px 30px;
+	border-radius: 30px;
+	border: 2px solid transparent;
+	font-size: medium;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-top: 40px;
+}
+button:hover{
+	background-color: #6664c0b7;
+	border: 2px solid #ffffff;
+}
+
+aside{
+	color: #454496;
+	font-size: 45px;
+	text-align: center;
+}
+
+article{
+	width: 99%;
+	display: flex;
+	text-align: center;
+	margin: 20px 0px;
+}
+article img{
+	width: 40%;
+	display: block;
+	margin: auto;
+}
+/* end of main body */ 
+
+/* main agendamento */ 
+
+.cad{
+	position: fixed;
+    top: 1px; bottom:0; 
+    left: 0; right:0;
+	margin: auto;
+    width: 600px;
+    height: 500px;
+    padding: 15px;
+    border: solid 1px #4c4d4f;
+    background: #ffffff;
+	
+}
+.cad a {
+	color:black;
+}
+
+/* footer */ 
+
+footer{
+	background-color: #454496;
+	position: static;
+	left:0px;
+	bottom:0px;
+	width:100%;
+	text-align: center;
+	padding: 0px 0px 5px 0px;
+	margin: 40px 0px 0px 0px;
+	color: #ffffff;
+}

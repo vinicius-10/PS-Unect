@@ -1,0 +1,54 @@
+
+<div class="consent" id="consent">
+    <h1>Aviso</h1>
+    Este site utiliza cookie para uma melhor experiencia. Ao continuar estára aceitando o uso para este fim.
+    <br><button onclick="fechar()" type="button">OK</button> 
+</div>
+
+<style>
+    
+    .consent{
+        background-color: rgba(255, 255, 255, 0.911);
+        box-shadow: 0px 0px 20px 6px black ;
+        margin:15px;
+        width: 400px;
+        height: 200px;
+        padding: 20px 10px;
+        text-align: center;
+        font-weight: bold;
+        color: #5e5e5e;
+        position: fixed;
+        right:0px;
+        bottom: 0px;
+    }
+
+    .consent button{
+        width: 80px;
+        height: 47px;
+        background: #272727;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        margin-top: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    
+</style>
+
+<script>
+
+    const accept = localStorage.getItem('accept');
+
+    if(accept){
+        document.getElementById('consent').style.display='none';
+    }
+
+    function fechar(){
+        document.getElementById('consent').style.display='none';
+        localStorage.setItem('accept','yes');
+    }
+    
+</script>

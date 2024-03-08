@@ -1,0 +1,225 @@
+body{
+	padding: 90px 0px 0px 0px ;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	background-color: #c3c9ff;
+	color:#ffffff ;
+}
+a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+/* menu */ 
+
+header{
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	background-color: #454496;
+	height: 90px;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left:0;
+}
+
+
+.logo{
+	font-size: 23px;
+	width: 25%;
+	text-align: center;
+}
+span{
+	color: #c3c9ff;
+}
+
+
+nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-grow: 2;
+	justify-content: right;
+	font-size: 17px;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+}
+
+ul.dropdown {
+	padding: 0px;
+	background: #454496;
+	display: none; 
+	position: absolute;
+	left: 0px;
+	font-size: 15px;
+}
+
+ul li:hover ul.dropdown {
+	display: block;
+}
+
+ul li {
+	display: block;
+	position: relative;
+	line-height: 21px;
+	text-align: left;
+}
+
+li a:hover{
+	color: #c3c9ff;
+	transition: .4s;
+}
+
+
+/* end menu */ 
+
+
+/* main body */ 
+
+
+main{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 2% 12%;
+	justify-content: center;
+	min-height: 57.7vh;
+}
+
+.BoxUsuario{
+	height: 320px;
+	width: 300px;
+	padding: 30px 0px;
+	background: #454496;
+	border-radius: 20px;
+	margin: 15px;
+	text-align: center;
+	font-weight:400;
+	font-size: 17px;
+	display: flex;
+	flex-direction: column;
+}
+
+.BoxAppliances{
+	min-height: 180px;
+	width: 300px;
+	padding: 30px 0px;
+	background: #454496;
+	border-radius: 20px;
+	margin: 40px 15px;
+	text-align: center;
+	font-weight:400;
+	font-size: 17px;
+	display: flex;
+	flex-direction: column;
+	word-wrap: break-word;
+}
+
+.ListAppliances{
+    text-align: left;
+	height: 120px;
+	overflow-y: auto;
+	background-color: #565499;
+}
+
+button{
+	background-color:#716fdf;
+	text-decoration: none;
+	padding: 9px 25px;
+	border-radius: 30px;
+	border: 2px solid transparent;
+	font-size: medium;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin: 10px 10px;
+	color:#ffffff ;
+}
+button:hover{
+	background-color: #6664c0b7;
+	border: 2px solid #ffffff;
+}
+
+.button{
+    position: static;
+    left: 0px;
+    bottom: 0px;
+	width: 100%;
+}
+
+#popup{
+	display: none;
+	background-color:#e6e4ff ;
+}
+
+.popup{
+    position: fixed;
+    top: 0; bottom: 0; 
+    left: 0; right:0;
+    margin: auto;
+    width: 450px;
+    height: 300px;
+    padding: 15px;
+    border: solid 1px #4c4d4f;
+    background: #f5812a;
+    border-radius: 15px;   
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.591);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    align-items: center;
+}
+
+.popup img{
+    width:45px;
+}
+
+.fechar{
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right:0;
+	cursor: pointer;
+}
+
+.mensagem{
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+	padding: 40px 25px 20px 25px;
+}
+#name{
+	font-size: 25px;
+	padding: 0px 25px 40px 25px;
+}
+
+.mensagem p{
+    font-size: 20px;
+
+    color: black;
+}
+
+/* end of main body */ 
+
+/* footer */ 
+
+footer{
+	background-color: #454496;
+	position: static;
+	left:0px;
+	bottom:0px;
+	width:100%;
+	text-align: center;
+	padding: 0px 0px 5px 0px;
+	margin: 40px 0px 0px 0px;
+}

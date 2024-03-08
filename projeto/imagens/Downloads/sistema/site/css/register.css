@@ -1,0 +1,280 @@
+body{
+	padding: 90px 0px 0px 0px ;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	background-color: #454496be;
+    align-items: center;
+}
+a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+/* menu */ 
+
+header{
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	background-color: #454496;
+	height: 90px;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left:0;
+}
+
+
+.logo{
+	font-size: 23px;
+	width: 25%;
+	text-align: center;
+}
+span{
+	color: #c3c9ff;
+}
+
+
+nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-grow: 2;
+	justify-content: right;
+	font-size: 17px;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+}
+
+ul.dropdown {
+	padding: 0px;
+	background: #454496;
+	display: none; 
+	position: absolute;
+	left: 0px;
+	font-size: 15px;
+}
+
+ul li:hover ul.dropdown {
+	display: block;
+}
+
+ul li {
+	display: block;
+	position: relative;
+	line-height: 21px;
+	text-align: left;
+}
+
+li a:hover{
+	color: #c3c9ff;
+	transition: .4s;
+}
+
+/* end menu */ 
+
+
+/* main body */ 
+
+main{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    margin-top: 4.5%; 
+    border-radius: 25px;
+}
+
+.img{
+    background-color:#c3c9ff;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px  0 0 20px;
+}
+img{
+    width: 100%;
+}
+
+.from{
+    color: #454496;
+    margin: 3%;
+}
+
+.keep{
+    display: block;
+    font-size: 14px;
+    width: 50vh;
+    color:#474688;
+}
+
+
+form .field{
+    margin-bottom: 15px;
+    
+}
+form .field label{
+    color: #454496;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    
+}
+form .field input{
+    width: 95%;
+    background-color: #c3c9ff;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+}
+form .field input:focus{
+    border-color: #ff008869;
+}
+
+form .field button{
+    width: 100%;
+    height: 47px;
+    background: #454496;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.aparelhos{
+	justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border:#353474e8 1px solid;
+    padding: 5px;
+    border-radius:13px;
+    width: 50vh;
+    overflow-y: auto;
+    max-height: 300px;
+}
+.aparelho{
+    margin: 1%;
+    font-size: 15px;
+    word-wrap:break-word;
+    width: 25%;
+}
+
+.check{
+    margin-right: 5px;
+    
+}
+.view{
+    font-size: 15px;
+    font-weight: bold;
+    color: #454496;
+    margin: 5px 0px 20px 0px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file{
+    padding: 23px;
+    margin: 0px;
+    width: 200px;
+    background-color: #c3c9ff;
+    color: rgb(133, 133, 133);
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    border: solid 1px #454496;
+    border-radius: 10px;
+    
+}
+
+.image{
+    width: 300px;
+    display: flex;   
+}
+.image img{
+    width: 60px;
+    position: relative;
+    left: 20px;
+}
+
+
+.popup{
+    position: fixed;
+    top: 0; bottom: 0; 
+    left: 0; right:0;
+    margin: auto;
+    width: 450px;
+    height: 300px;
+    padding: 15px;
+    border: solid 1px #4c4d4f;
+    background: #f5812a;
+    border-radius: 15px;   
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.591);
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 253, 17);
+    text-align: center;
+    align-items: center;
+}
+
+.popup img{
+    width:45px;
+}
+
+.fechar{
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right:0;
+
+}
+
+.mensagem{
+    text-align: center;
+    align-items: center;
+    position: relative;
+    top: 30%; bottom: 0;
+    font-size: 25px;
+
+}
+
+.mensagem p{
+    font-size: 20px;
+
+    color: black;
+}
+.men{
+    color:red;
+}
+ 
+/* footer */ 
+
+footer{
+	background-color: #454496;
+	position: static;
+	left:0px;
+	bottom:0px;
+	width:100%;
+	text-align: center;
+	padding: 0px 0px 5px 0px;
+	margin: 40px 0px 0px 0px;
+	color: #ffffff;
+}

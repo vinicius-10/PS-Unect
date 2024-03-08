@@ -1,0 +1,116 @@
+body{
+	padding: 90px 0px 0px 0px ;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+	background-color: #c3c9ff;
+    align-items: center;
+    color: #ffffff;
+}
+a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+/* menu */ 
+
+header{
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	background-color: #454496;
+	height: 90px;
+	position: fixed;
+	width: 100%;
+	top:0;
+	left:0;
+}
+
+.logo{
+	font-size: 23px;
+	width: 25%;
+	text-align: center;
+}
+span{
+	color: #c3c9ff;
+}
+
+/* main */ 
+main{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    margin-top: 2.3%; 
+    border-radius: 25px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+	0 10px 10px rgba(0,0,0,0.22);
+    text-align: center;
+    height:63vh;
+
+}
+
+aside{
+    background-color: #716fdf;
+    width: 50%;
+    border-radius: 0px 25px 25px 0px;
+    padding-top: 20vh;
+}
+.from{
+    width: 50%;
+    color: #454496;
+    margin: 5vh 0vh;
+    align-items: center;
+    padding: 12px;
+}
+h3{
+    color: rgb(255, 12, 12);
+}
+
+input{
+    width: 65%;
+    background-color: #c3c9ff;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    margin:5px;
+}
+
+button{
+    width: 20%;
+    height: 47px;
+    background: #454496;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.title{
+    font-size: 35px;
+}
+
+/* end main */ 
+
+/* footer */ 
+
+footer{
+	background-color: #454496;
+	position: static;
+	left:0px;
+	bottom:0px;
+	width:100%;
+	text-align: center;
+	padding: 0px 0px 5px 0px;
+	margin: 40px 0px 0px 0px;
+}
