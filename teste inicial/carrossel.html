@@ -205,13 +205,10 @@
         <script language="javascript">
 
             const imgs = document.getElementById("carrossel");
-            const img = document.getElementsByClassName("caixa_carrossel");
-
-
             let idx = 0;
             function carrossel() {
                 idx++;
-                if(idx > img.length - parseInt(imgs.clientWidth/400)){
+                if(idx > 2){
                     idx=0;
                 }
                 imgs.style.transform = `translateX(${-idx * (300)}px)`;
