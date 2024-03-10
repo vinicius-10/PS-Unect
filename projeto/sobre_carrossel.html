@@ -8,6 +8,7 @@
             body{
                 margin:0;
                 padding:0;
+                overflow-x: hidden;
             }
             
             .sobre{
@@ -40,7 +41,7 @@
                 left: 30px;
             }
 
-            .sobre_texto button{
+            button{
                 width: 282px;
                 height: 57;
                 border-radius: 8px;
@@ -48,7 +49,7 @@
                 border: none;
                 font-size: 18px;
                 font-weight: bold;
-                color: #ffff;
+                color: #F0F0F0;
                 cursor: pointer;
             }
 
@@ -62,7 +63,7 @@
                 color: #ffff;
                 box-shadow: 3px 2px 3px black;
             }
-            
+
             .sobre_texto .texto{
                 font-size: 18px;
             }
@@ -85,7 +86,7 @@
                 padding: 0px;
                 width: 100%;
                 height: 250px;
-                background-image: url("imagens/cafe.png");
+                background-image: url("imagens/cafe6.png");
                 background-repeat: no-repeat;
                 
             }
@@ -122,14 +123,13 @@
                 margin-bottom: 36px;
             }
 
-            .corpo_carosel{
-
+            #corpo_carosel{
                 height:min-content ;
                 position: relative;
                 left: 10%;
                 display: flex;
-                width: 90%;
-                overflow-x:auto;
+                transition: transform 0.5s ease-in-out;
+                transform: translateX(0);
                 
             }
 
@@ -164,6 +164,12 @@
                 .sobre_texto{
                     width: 100%;
                 }
+
+                button{
+                    width: 30%;
+                    position: relative;
+                    left: 35%;
+                }
             }
             
 
@@ -191,7 +197,7 @@
     <div class="cafe"></div>
     <div class="galeria">
         <p class="titulo_cafeteria">CAFETERIA <hr></p>
-        <div class="corpo_carosel">
+        <div id="corpo_carosel">
         
             <div id="prod0" class="caixa_carrossel"> <img src="imagens/Brigadeiro.svg"  ><p>Brigadeiro de capuccino</p>O brigadeiro de cappuccino é uma das guloseimas que enfeitam o balcão da doceria... </div>
             <div id="prod1" class="caixa_carrossel"> <img src="imagens/biscoito.svg"  ><p>Pão de Mel</p>O pão de mel é um dos doces mais tradicionais que temos, ele é recheado com doce de leite... </div>
@@ -201,46 +207,21 @@
             
         </div>
     </div>
-        <script language="javascript">
-            const imgs = document.getElementById("carrossel");
-            const img = document.getElementsByClassName("img_carrossel");
-            const img1 = document.getElementById("prod0");
-            const img2 = document.getElementById("prod1");
-            const img3 = document.getElementById("prod2");
-            const img4 = document.getElementById("prod3");
+    <script language="javascript">
 
-
-            let idx = 0;
-            function carrossel() {
-                idx++;
-                if(idx > img.length - parseInt(imgs.clientWidth/210)){
-                    idx=0;
-                }
-                imgs.style.transform = `translateX(${-idx * (210)}px)`;
-        
+        const imgs = document.getElementById("corpo_carosel");
+        let idx = 0;
+        function carrossel() {
+            idx++;
+            if(idx > 5 - parseInt(imgs.clientWidth/500)){
+                idx=0;
             }
-
-
-            function mover_carrossel(){
-                idx++;
-
-                img1.style.transform = `translateX(${-idx * (345)}px)`;
-                img2.style.transform = `translateX(${-idx * (345)}px)`;
-                img3.style.transform = `translateX(${-idx * (345)}px)`;
-                img4.style.transform = `translateX(${-idx * (345)}px)`;
-
-                setTimeout( () => {
-                    document.getElementById(`prod0`).style.opacity = 0;
-                    document.getElementById(`prod0`).style.transform = `translateX(1035px)`; 
-                }, "500");
-                
-                setTimeout( () => {
-                    document.getElementById(`prod0`).style.opacity = 1;
-                },"1000");
-            }
+            imgs.style.transform = `translateX(${-idx * (300)}px)`;
     
-        
-        
-        </script>
+        }
+
+        setInterval(carrossel, 2000);
+    
+    </script>
     </body>
 </html>
