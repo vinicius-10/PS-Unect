@@ -1,0 +1,97 @@
+header {
+    width: 100%;
+    padding: 28px 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+#navbar {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #291505;
+    z-index: 1000; 
+}
+
+#nav_list {
+    display: flex; 
+    list-style: none;  
+    gap: 230px; 
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    margin-left: 5%;
+    display: flex;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #FFFFFF; 
+    font-weight: 600; 
+    padding: 0px 0px;
+    border-bottom: 8px;
+}
+.linha_grifada {
+    margin: 1px 0;
+    height: 2px;
+    width: 50px;
+    align-self: center;
+    background-color: #b2784a;
+    margin-left: 5px;
+}
+.logo img {
+    display: flex;
+    align-items: center;
+    width: 138px;
+    height: 70px;
+    top: 7px;
+}
+.desc_logo{
+    color:#FFFFFF;
+    margin-left: 5px;
+}
+.contact-info{
+    display: flex;
+    align-items: center;
+}
+.num{
+    color: #FFFFFF;
+
+}
+.num img{
+    padding: 0px 8px 0 0px;
+    position: relative;
+    top: 5px;
+}
+.material-symbols-outlined.tel{
+  color:#b2784a;
+  font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+  margin-right: 5px;
+}
+@media screen and (max-width: 980px) {
+    .nav-item:not(.logo,.desc_logo) {
+        display: none; 
+    }
+    .logo {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        margin-left: 3%; 
+    }
+
+    .logo img {
+        width: 138px;
+        height: 70px;
+        margin-right: 15px; 
+    }
+
+    .desc_logo {
+        display: flex; 
+        align-items: center;
+        color: #FFFFFF;
+        width: max-content;
+        font-size: 20px;
+    }
+}
