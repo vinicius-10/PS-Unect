@@ -55,6 +55,7 @@ footer {
     justify-content: left;
     }
     .footer_list{
+        padding:0px 30px;
         flex-direction: column;
     }
     .direitos{

@@ -41,7 +41,7 @@
     margin-left: 10%;
     font-size: 28px;
     display: block;
-    box-shadow: 0px 0px 6px #757574;
+    box-shadow: -4px 7px 29px 6px #1F0C0033;
     border-radius: 8px 0px 0px 8px;
 }
 .box1 .info-par p {
@@ -54,9 +54,11 @@
     flex: 0 0 45%;
     margin-right: 10%;
     display: block;
-    box-shadow: 2px 0px 6px #757574;
+    box-shadow: -4px 7px 29px 6px #1F0C0033;
     border-radius: 0px 8px 8px 0px;
 }
+
+
 .separador {
     margin: 20px 0;
     height: 2px;
@@ -164,7 +166,7 @@
         border-radius: 20px;
     }
     .novos-icones {
-        margin: 20px 0 30px 0;
+        margin: 50px 0 30px 0;
         display: block; 
         text-align: center; 
     }
@@ -174,17 +176,27 @@
         margin-bottom: 10px; 
     }
 
-    .icones {
+    .Ban_icones {
         display: flex; 
-        justify-content: center; 
+        justify-content: center;
+    }
+
+    .icones{
+        padding: 20px;
     }
     .icones img {
-        padding: 20px;
-
+        width: min-content;
+        margin: 0;
+        padding: 0;
+        border-radius: 10px;
+        cursor: pointer;
     }
     .icones .material-icons {
         font-size: 24px; 
         margin: 0 10px; 
     }
     
+    .icones img:hover{
+        box-shadow: 1px 1px 3px black;
+    }
 }
