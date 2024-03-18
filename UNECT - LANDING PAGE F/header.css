@@ -12,19 +12,27 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #291505;
+    background-color: #57290B;
     z-index: 1000; 
 }
 
 #nav_list {
     display: flex; 
     list-style: none;  
-    gap: 230px; 
-    margin: 0;
     padding: 0;
+    margin: 0;
     align-items: center;
-    margin-left: 5%;
-    display: flex;
+    width: 100%;
+
+}
+.nav-item{
+    flex-wrap: nowrap;
+    min-width: 140px;
+    width: 17%;
+    display: block;
+    align-items: center;
+    padding: 0px;
+    margin: 0 0 0 4%;
 }
 .nav-item a {
     text-decoration: none;
@@ -32,6 +40,7 @@ header {
     font-weight: 600; 
     padding: 0px 0px;
     border-bottom: 8px;
+    flex-wrap: nowrap;
 }
 .linha_grifada {
     margin: 1px 0;
@@ -58,7 +67,6 @@ header {
 }
 .num{
     color: #FFFFFF;
-
 }
 .num img{
     padding: 0px 8px 0 0px;
@@ -74,6 +82,11 @@ header {
     .nav-item:not(.logo,.desc_logo) {
         display: none; 
     }
+    .nav-item{
+        margin: 0%;
+        width: 90%;
+    }
+    
     .logo {
         display: flex;
         align-items: center; 

@@ -14,7 +14,7 @@ section {
   }
 
 footer {
-    background-color: #291505;
+    background-color: #57290B;
     text-align: center;
     height: 50px;
     color: #ffffff;
@@ -22,7 +22,6 @@ footer {
     padding: 20px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .footer_list {
@@ -30,7 +29,21 @@ footer {
     margin: 0;
     padding: 0;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+
 }
+.direitos{
+    width: 50%;
+    text-align: right;
+}
+.devs{
+    width: 50%;
+    text-align: left;
+}
+
 .footer_list li {
     margin-right: 20px;
     margin: 0px 10px; 
@@ -41,20 +54,13 @@ footer {
     align-items: left;
     justify-content: left;
     }
-
-    .footer_list li {
-        display: block; 
-        margin: 0px 0; 
-        text-align: left;
-        width: 100%;
-        margin-left: 20%;
+    .footer_list{
+        flex-direction: column;
     }
-    
-}
-@media (min-width: 980px) {
-    .footer_list {
-        display: flex;
-        justify-content: center;
-        gap: 1000px;
+    .direitos{
+        text-align: left;
+    }
+    .devs{
+        text-align: left;
     }
 }

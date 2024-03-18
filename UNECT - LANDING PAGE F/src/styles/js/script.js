@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll("#nav_list a");
+    const links = document.querySelectorAll("a");
 
     links.forEach(link => {
         link.addEventListener("click", function(event) {
@@ -15,3 +15,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+const imgs = document.getElementById("corpo_carosel");
+        let idx = 0;
+        function carrossel() {
+            idx++;
+            if(idx > 5 - parseInt(imgs.clientWidth/500)){
+                idx=0;
+            }
+            imgs.style.transform = `translateX(${-idx * (300)}px)`;
+    
+        }
+
+        setInterval(carrossel, 2000);

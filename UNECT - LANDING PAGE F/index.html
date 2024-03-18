@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="sobre.css">
     <link rel="stylesheet" href="carrossel.css">
     <title>Palavras Cafeinadas</title>
-    <link rel="shortcut icon" href="src/images/logo_escura.svg" />
+    <link rel="shortcut icon" href="src/images/logo_escura.svg">
 </head>
 <body>
     <header>
@@ -27,7 +27,7 @@
                     <div class="linha_grifada"></div> 
                 </li>
                 <li class="nav-item logo">
-                    <a href="#"><img src="src/images/logo_escura.svg" alt="Logo"></a>
+                    <a href="#content"><img src="src/images/logo_escura.svg" alt="Logo"></a>
                     <p class="desc_logo">Palavras Cafeinadas</p>
                 </li>
                 <li class="nav-item">
@@ -45,6 +45,11 @@
     
     <main id="content">
         <section id="inicio">
+
+            <div id="banner">
+                <img src="src/images/fundo1.svg" alt="">
+
+            </div>
             <div id="cta"> 
                 <h1 class="title">
                     Leia acompanhado de uma culinária de qualidade
@@ -53,14 +58,11 @@
                     Aonde a paixão por livros e o amor por café sempre tem lugar á mesa.
                 </p>
 
-                <button class="btn-default-inicio">  VENHA CONHECER   
+                <a href="#cafeteria" class="link"><button class="btn-default-inicio">  VENHA CONHECER  
                     <span class="material-symbols-outlined">arrow_right_alt</span>
-                </button>
+                </button></a>
             </div>
-            <div id="banner">
-                <img src="src/images/fundo1.svg" alt="">
-
-            </div>
+            
         </section>
 
         <div class="sobre" id="sobre">
@@ -71,9 +73,9 @@
                 </p>
                 <p class="texto">O sonho de Carolina era criar um espaço aonde pudesse unir seu amor por culinária e a enorme paixão por literatura, venha saber mais dessa jornada:</p>
     
-                <button class="btn-default-inicio">  FALE CONOSCO   
+                <a href="#contato" class="link"><button class="btn-default-inicio">  FALE CONOSCO   
                     <span class="material-symbols-outlined">arrow_right_alt</span>
-                </button>
+                </button></a>
                 
             </div>
         <div class="sobre_img">
@@ -94,23 +96,6 @@
             
         </div>
     </div>
-    <script language="javascript">
-
-        const imgs = document.getElementById("corpo_carosel");
-        let idx = 0;
-        function carrossel() {
-            idx++;
-            if(idx > 5 - parseInt(imgs.clientWidth/500)){
-                idx=0;
-            }
-            imgs.style.transform = `translateX(${-idx * (300)}px)`;
-    
-        }
-
-        setInterval(carrossel, 2000);
-    
-    </script>
-
         <section id="contato">
             <div class="background"></div>
             <div class="titulo_background">
@@ -188,10 +173,10 @@
 
     <footer>
         <ul class="footer_list">
-            <li>
+            <li class="devs">
                 Desenvolvido por Unect Jr
             </li>
-            <li>
+            <li class="direitos">
                 Todos os direitos reservados ©
             </li>
         </ul>
