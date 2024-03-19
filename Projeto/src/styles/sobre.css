@@ -29,9 +29,9 @@ height: 650px;
     width: 270px;
     background-color: #FBC9A8;
     height: 28px;
-    position: absolute;
-    top: 902px;
-    left: 30px;
+    position: relative;
+    top: 88px;
+    left: -21px;
 }
 
 button:hover{
